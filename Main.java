@@ -1,19 +1,11 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-    Scanner greatEye = new Scanner(System.in);
+        Man m = new Man("Alex", 180, 75, 30);
+        Woman w = new Woman("Jane", 165, 60, 26);
 
-    System.out.print("Please choose an operator (+, -, *, /):");
-    String operator = greatEye.nextLine();
+        m.printManDetails();
+        w.printWomanDetails();
 
-    System.out.print("\nEnter your first number: ");
-    double num1 = greatEye.nextDouble();
-
-    System.out.print("\nEnter your second number: ");
-    double num2 = greatEye.nextDouble();
-
-    NewCalculator calc = new NewCalculator(num1, operator, num2);
-    System.out.println("The result is: " + calc.calculate());
+        System.out.println("Both " + m.name + " and " + w.name + " are humans.");
     }
 }
